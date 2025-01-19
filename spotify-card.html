@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Spoitfy Card</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #170f47;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
+         .card{
+            background-color: black;
+            border-radius: 20px;
+            padding: 30px;
+            width: 800px;
+            height: 400px;
+        } 
+        .card .container{
+            background-color: #1b2653;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(100px,100px);
+            color: #fefefe;
+        }
+        .photo img{
+            height:330px;
+            border-radius: 20px;
+        }
+        .head{
+            display: grid;
+            grid-template-rows: repeat();
+            padding-left: 20px;
+            position: relative;
+        }
+        .logo{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .logo img{
+            width: 40px;
+        }
+        h2{
+            font-size: 30px;
+        }
+        .preview a{
+            position: relative;
+            text-decoration: none;
+            color: aliceblue;
+            padding: 5px 10px;
+            font-size: 20px;
+            padding: 1px;
+        }
+        .text a {
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            display: inline;
+        }
+        .text a::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+            font-size: 20px; 
+        }
+        .text a:hover::after{
+            transform: scale(1);
+        }
+        .preview .word{
+            background-color: #fefefe;
+            display: inline;
+            color: #170f47;
+            padding: 3px 7px 3px 7px;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+        .preview a::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+            font-size: 20px; 
+        }
+        .preview a:hover::after{
+            transform: scale(1);
+        }
+
+        .icon{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .icons a{
+            display:inline;
+            background-color: #1b2653;
+            text-decoration: none;
+            font-size: 50px;
+        }
+        /* .play i{
+            width: 100px;
+            background-color: #1b2653;
+            
+        } */
+        .more i {
+            font-size: 40px ;
+            font-style: normal;
+        }
+        .foot{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .bgc-video{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        @media(min-aspect-ratio:16/9){
+            .bgc-video{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media(max-aspect-ratio:16/9){
+            .bgc-video{
+                width: auto;
+                height: 100%;
+            }
+        }
+        .text .save img{
+            position: relative;
+            padding-top: 15px;
+            width: 30px;
+        }
+        .savespo .sid{
+            /* background-color: #fefefe; */
+            display: inline;
+            color: white;
+            padding: 3px 7px 3px 7px;
+            border-radius: 3px;
+            font-size: 20px;
+        }
+        .savespo a{
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <video autoplay loop muted plays-inline class="bgc-video">
+        <source src="/02_project/images/basics/WhatsApp Video 2024-10-15 at 22.11.45_04d2f510.mp4" type="video/mp4">
+    </video>
+    <div class="card">
+        <div class="container">
+            <div class="photo" >
+                <img src="/02_project/images/basics/anuvjain.jpg" alt="jo tum mere ho">
+            </div>
+            <div class="head" 
+            style="
+            grid-template-areas: 'header header header''main main main''footer footer footer';
+            ">
+                <div class="logo" style="grid-area: header;">
+                    <img src="/02_project/images/basics/spotify.png" alt="">
+                </div>
+                <div class="text" style="grid-area: main;">
+                    <a href="#" style="font-size: 40px; font-weight: 600;">Jo Tum Mere Ho</a>
+                    <div class="preview">
+                        <p class="word">Preview</p>
+                        <a href="#" class="underlie">Anuv Jain</a>
+                    </div>
+                    <div class="savespo">
+                        <a href="#" class="save"><img src="/02_project/images/basics/cjifif44dfvot6ed5r0fv73hv2.png" alt=""></a>
+                        <p class="sid">Save on Spotify</p>
+                    </div>
+                    
+                </div>
+                <div class="foot" style="grid-area: footer;">
+                    <div class="icons">
+                        <a href="#" class="more" style="color: white;"><i class="fa-solid fa-ellipsis"></i></a>
+                        <a href="#" class="play" style="color: white; margin:10px;"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
