@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fav Singer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,900;1,900&family=Open+Sans:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .cards{
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-image:linear-gradient(to bottom right,rgb(0, 0, 0),#a8a8a8) ;
+            flex-wrap: wrap;
+        }
+        .card{
+            margin: 10px;
+        }
+        .c-items{
+            height: 480px;
+        }
+
+        .c-img{
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+        .card-body{
+            position: relative;
+        }
+        .effect{
+            position: relative;
+            display: inline;
+        }
+        .effect::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            transform: scaleX(0);
+            transition: transform 0s ease-in-out;
+            font-size: 20px;             
+        }
+        .effect:hover::after{
+            transform: scale(1);
+            cursor: pointer;
+        }
+        .copyright{
+            background-color: #374758;
+            color: white;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+  
+</head>
+<body>
+    <!-- <div class="container"> -->
+        <!-- carousel starts -->
+        <div id="carousel" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active c-items">
+                    <img src="https://mrwallpaper.com/images/high/lata-mangeshkar-indian-singer-z9wxfx4exash9ww6.webp" class="d-block w-100 c-img" alt="...">
+                    <!-- <div class="carousel-caption bottom-0 ">
+                        <p>Some representative placeholder content for the first slide.</p>
+                        <h1 class="display-2 fw-bold text-capitalize letters">Lata Mangeshkar</h1>
+                    </div> -->
+                </div>
+                <div class="carousel-item c-items">
+                    <img src="https://mrwallpaper.com/images/high/lata-mangeshkar-with-coffee-cup-sgd1v7q221wm6777.webp" class="d-block w-100 c-img" alt="...">
+                    <!-- <div class="carousel-caption ">
+                        <p>Some representative placeholder content for the first slide.</p>
+                        <h1>Second slide label</h1>
+                    </div> -->
+                </div>
+                <div class="carousel-item c-items">
+                    <img src="https://mrwallpaper.com/images/high/legendary-indian-playback-singer-lata-mangeshkar-vmmhpegufm4juni3.webp" class="d-block w-100 c-img" alt="...">
+                    <!-- <div class="carousel-caption ">
+                        <p>Some representative placeholder content for the first slide.</p>
+                        <h1>Third slide label</h1>
+                    </div> -->
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- carousel ends -->
+
+        <!-- cards starts -->
+        <div class="cards">
+            <div class="row gy-3">
+                <!-- 1st card -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white">
+                        <img src="https://s.saregama.tech/image/c/fw_485/9/97/95/woh-kaun-thi_1437651752.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title effect">Lag Ja Gale</h5>
+                            <p class="card-text mt-1">Lag Jaa Gale - Sadhana, Lata Mangeshkar, Woh Kaun Thi Romantic Song</p>
+                            <a href="https://youtu.be/TFr6G5zveS8?si=SGhXAwRJs_8VBhv6" class="btn btn-primary">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd card -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReK-s5d5R8_v_kKBpTRn7bSeaSKvx_PFAIQA&s" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title effect">Aaja Sanam Madhur Chandani</h5>
+                            <p class="card-text mt-1">Aaja Sanam Madhur Chandni (HD) - Chori Chori (1956) - Nargis - Raj Kapoor.</p>
+                            <a href="https://youtu.be/arOaGZ839fs?si=9iATDMxs3d0paIEO" class="btn btn-primary">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3rd card -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white">
+                        <img src="https://a10.gaanacdn.com/gn_img/albums/BZgWoQOK2d/ZgWod0mb2d/size_m.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title effect">Ajib Dastan Hai Yeh</h5>
+                            <p class="card-text mt-1">Ajib Dastan Hai Yeh | Video Song | Dil Apna Aur Preet Parai | Raaj Kumar, Meena K | Lata Mangeshkar</p>
+                            <a href="https://youtu.be/yZ_UkMJHEAk?si=zOGbVmfr56z1JhMQ" class="btn btn-primary">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4th card -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white">
+                        <img src="https://c.saavncdn.com/633/Shor-Hindi-1972-20200905113925-500x500.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title effect">Ek Pyaar Ka Nagma Hai</h5>
+                            <p class="card-text mt-1">EK PYAR KA NAGHMA HAI (Version 1) - Shor (1972) | Lata Mangeshkar, Mukesh | Manoj Kumar | Nanda</p>
+                            <a href="https://youtu.be/HD6JPjWF9z4?si=m8QnxnA-ks36R7lw" class="btn btn-primary">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5th card -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white">
+                        <img src="https://i.scdn.co/image/ab67616d0000b27396fa496a2cfc301430589024" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title effect">Do Pal</h5>
+                            <p class="card-text mt-1">Do Pal | Veer-Zaara | Shah Rukh Khan | Preity Zinta | Lata Mangeshkar | Sonu Nigam</p>
+                            <a href="https://youtu.be/nEjzfwRamvA?si=qD7-f1GZlYeuJldm" class="btn btn-primary">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6th card -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white">
+                        <img src="https://c.saavncdn.com/876/Anamika-Hindi-1972-500x500.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title effect">Bhaho Me Chale Aao</h5>
+                            <p class="card-text mt-1">Baahon Mein Chale Aao - Lata Mangeshkar - Anamika (1973).</p>
+                            <a href="https://youtu.be/WO8PIdqnqYY?si=_naIjDtWMvgxhZk4" class="btn btn-primary">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7th card -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white">
+                        <img src="https://c.saavncdn.com/104/Mohabbatein-Hindi-2000-20190329182220-500x500.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title effect">Aankhein Khuli</h5>
+                            <p class="card-text mt-1">Aankhein Khuli Song | Mohabbatein | Shah Rukh Khan, Aishwarya Rai | Lata Mangeshkar, Udit Narayan</p>
+                            <a href="https://youtu.be/BHPapSgnOaA?si=84joP7tkVDd_xCXz" class="btn btn-primary">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8th card -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white">
+                        <img src="https://c.saavncdn.com/825/Rang-De-Basanti-Hindi-2005-20190516125130-500x500.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title effect">Luka Chuppi</h5>
+                            <p class="card-text mt-1">A.R. Rahman - Luka Chuppi Best Video|Rang De Basanti|Aamir Khan|Lata Mangeshkar|Soha Ali </p>
+                            <a href="https://youtu.be/FFpgYjL2aJo?si=vq7CNUTZtK17gdZx" class="btn btn-primary">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cards ends -->
+
+        <footer>
+            <div class="copyright">
+                &copy;Siddharth K Ravani
+            </div>
+        </footer>
+    <!-- </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
